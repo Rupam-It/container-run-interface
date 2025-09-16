@@ -1,0 +1,20 @@
+Things needs to be understand here is : 
+1. linux namespaces
+    a.PID Namespace
+    b. Mount Namespace
+    c. Network Namespace
+    d. UTS Namespace
+    e. User Namespace
+    f. IPC Namespace
+    g. Cgroup Namespace
+
+    Resource: 
+2. Control Groups
+    a. CPU Control
+    b. Memory Management
+    c. Block I/O
+    d. Network Bandwidth
+    e. Device Access
+
+    resource: 
+
