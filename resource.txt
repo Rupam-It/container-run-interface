@@ -8,7 +8,7 @@ Things needs to be understand here is :
     f. IPC Namespace
     g. Cgroup Namespace
 
-    Resource: 
+    Resource: https://www.redhat.com/en/blog/7-linux-namespaces
 2. Control Groups
     a. CPU Control
     b. Memory Management
@@ -16,5 +16,42 @@ Things needs to be understand here is :
     d. Network Bandwidth
     e. Device Access
 
-    resource: 
+    resource: https://www.youtube.com/watch?v=sK5i-N34im8
+              https://devoriales.com/post/318/understanding-kubernetes-container-runtime-cri-containerd-and-runc-explained
 
+
+probrable algorithm :
+1. Parse OCI Configuration
+   - Read config.json specification
+   - Validate container parameters
+   - Prepare runtime environment
+
+2. Setup Filesystem
+   - Create container root filesystem
+   - Mount necessary directories
+   - Setup copy-on-write layers
+
+3. Create Namespaces
+   - Fork new process
+   - Create required namespaces (PID, mount, network, etc.)
+   - Configure namespace-specific settings
+
+4. Configure Cgroups
+   - Create cgroup hierarchy
+   - Set resource limits and constraints
+   - Attach container process to cgroups
+
+5. Setup Security
+   - Apply security profiles (SELinux, AppArmor)
+   - Configure capabilities and seccomp filters
+   - Set user/group mappings
+
+6. Execute Container Process
+   - Change root directory (chroot)
+   - Setup environment variables
+   - Execute container's main process
+
+7. Monitor and Manage
+   - Track process lifecycle
+   - Handle signals and cleanup
+   - Collect logs and metrics
