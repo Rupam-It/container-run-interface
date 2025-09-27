@@ -1,7 +1,7 @@
-#My-Container (Minimal Container Runtime in Go)
+# My-Container (Minimal Container Runtime in Go)
 This project demonstrates how Linux namespaces work by creating a mini container runtime in pure Go. It re-executes itself into new namespaces (UTS, PID, NET, MNT), giving you an isolated environment — similar to how Docker works under the hood.
 
-##What This Container Runtime Does
+## What This Container Runtime Does
 My-Container creates process isolation using Linux namespaces, providing:
 
 Process Isolation: Container processes are completely separated from host processes
